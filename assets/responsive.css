@@ -1,0 +1,67 @@
+/* Responsive */
+@media (max-width: 980px) {
+  .nav-shell { grid-template-columns: auto 1fr; }
+  .header-status { display: none; }
+  .nav-links { justify-self: end; }
+  .hero { min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; align-items: start; }
+  .hero-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-side .mini-label, .side-links { grid-column: 1 / -1; }
+  .section-head { grid-template-columns: 160px minmax(0, 1fr); }
+  .work-grid { grid-template-columns: 1fr; }
+  .project-card { min-height: 520px; }
+  .fund-grid { grid-template-columns: 1fr; }
+  .fund-card { min-height: 320px; }
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .origin-card { grid-template-columns: 1fr; }
+  .origin-timeline { border-left: 0; border-top: 1px solid var(--hair-strong); }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-links { justify-content: flex-start; }
+}
+
+@media (max-width: 720px) {
+  .container { width: min(calc(100% - 28px), var(--content)); }
+  .site-header { position: relative; }
+  .nav-shell { min-height: 68px; grid-template-columns: auto minmax(0, 1fr); gap: 12px; }
+  .brand-name { display: none; }
+  .nav-links { overflow-x: auto; justify-content: flex-start; width: 100%; scrollbar-width: none; mask-image: linear-gradient(to right, transparent, black 8px, black calc(100% - 20px), transparent); padding-inline: 9px; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 9px; font-size: 9px; }
+  html { scroll-padding-top: 18px; }
+  section { padding: 78px 0; }
+  .hero { padding: 64px 0 78px; }
+  .hero h1 { font-size: clamp(54px, 19vw, 78px); }
+  .hero h1 span:last-child { margin-left: 0; }
+  .hero-note { margin-left: 0; }
+  .hero-side { grid-template-columns: 1fr; }
+  .hero-side .mini-label, .side-links { grid-column: auto; }
+  .section-head { grid-template-columns: 1fr; gap: 14px; margin-bottom: 30px; }
+  .section-kicker { padding-top: 0; }
+  .project-card { min-height: auto; padding: 25px; }
+  .project-card h3 { margin-top: 34px; }
+  .runtime-diagram, .research-visual { margin-inline: -25px; padding-inline: 25px; margin-top: 40px; }
+  .runtime-line { grid-template-columns: 1fr; gap: 7px; }
+  .runtime-line .connector { width: 1px; height: 17px; margin-left: 20px; }
+  .runtime-line .connector::after { content: "⌄"; right: -5px; top: 5px; }
+  .experiment-links { grid-template-columns: 1fr; }
+  .fund-card { padding: 25px; }
+  .fund-card h3 { margin-top: 44px; }
+  .portfolio-head { grid-template-columns: 1fr; align-items: start; }
+  .fund-legend { justify-content: flex-start; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 25px; }
+  .origin-copy { padding: 30px 25px 38px; }
+  .origin-timeline { padding: 36px 25px; }
+  .origin-timeline::before { left: 37px; top: 52px; bottom: 52px; }
+  .video-grid, .side-projects { grid-template-columns: 1fr; }
+  .scholar-banner { grid-template-columns: 1fr auto; gap: 16px; }
+  .citation-count { grid-column: 1 / -1; }
+  .paper-link { grid-template-columns: 1fr auto; gap: 13px; }
+  .paper-id { grid-column: 1 / -1; }
+  .colophon { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
